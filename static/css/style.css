@@ -1,0 +1,231 @@
+/* Meyer CSS Reset */
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+
+article, aside, footer, header, hgroup, main, nav, section {
+	display: block;
+}
+
+
+.cf { *zoom: 1; }
+.cf:after {	content: ""; display: block; clear: both; }
+
+em { color: #FFF; }
+
+body{
+	background-color: #212121;
+	color: #000305;
+	font-size: 62.5%; /* Base font size is 10px */
+	font-family: 'Istok Web', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#wrapper { 
+	position: absolute; 
+	width: 100%;
+	right: 0;
+	transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+}
+
+#wrapper.moved {
+	top: 0;
+	right: 230px;
+}
+
+
+.nav-trigger {
+	float: left;
+	width: 30px;
+	height: 23px;
+	background: url('img/hamburger-icon.png') no-repeat 0 0;
+	background-image: url('img/hamburger-icon.svg'), none;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: #d85669;
+}
+
+a:link, a:visited {
+	color: #d85669;
+}
+
+a:hover, a:active {
+	color: #C94B5E;
+}
+
+img { max-width: 100%; vertical-align: top }
+
+.centered-wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+#header{
+	background-color: #FFF;
+	padding: 50px 0;
+}
+
+#header .portrait{
+	width: 15%;
+	float: left;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 6.8em;
+	line-height: 0.86em;
+	color: #2a363b;
+	font-weight: 400;
+	margin: 0.1em 0 0.3em 0;
+	width: 72%;
+	float: right;
+}
+
+h1 .name {
+	font-size: 0.85em;
+}
+
+#header p { margin: 0 0 0.3em 0; float: right; width: 72%; }
+
+
+/* ---------- Devices ----- */
+
+
+.devices {
+	width: 100%;
+	padding-bottom: 100px;
+}
+
+.devices li {
+	display: block;
+	float: left;
+	margin-left: 80px;	
+	margin-top: 20px;
+	color: #FFF;
+	text-align: center;
+	font-size: 2em;
+}
+
+.devices li:first-child {
+	margin-left: 0 auto 0 auto;
+}
+
+.devices li a {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+.devices li.cuarto1-off a {
+	background-size: 100%;
+	background-image: url('img/light_bulb1_off.png');
+}
+
+.devices li.cuarto2-off a {
+	background-size: 100%;
+	background-image: url('img/light_bulb2_off.png');
+}
+
+.devices li.jardin-off a {
+	background-size: 100%;
+	background-image: url('img/leaf_off.png');
+}
+
+.devices li.panico-off a {
+	background-size: 100%;
+	background-image: url('img/panic_off.png');
+}
+
+.devices li.cuarto1-on a {
+	background-size: 100%;
+	background-image: url('img/light_bulb1_on.png');
+}
+
+.devices li.cuarto2-on a {
+	background-size: 100%;
+	background-image: url('img/light_bulb2_on.png');
+}
+
+.devices li.jardin-on a {
+	background-size: 100%;
+	background-image: url('img/leaf_on.png');
+}
+
+.devices li.panico-on a {
+	background-size: 100%;
+	background-image: url('img/panic_on.png');
+}
+
+
+
+
+/* ---------- Content ----- */
+
+.content {
+	padding: 80px 0 0 0;
+	color: #b7bdc0;
+	background-color: #BC1042;
+}
+
+
+/* navigation */
+
+.navigation {
+	position: fixed;
+	right: -230px;
+	top: 0;
+	width: 230px;
+	padding: 12px 0 0 0;
+	transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+}
+
+.navigation.open {
+	right: 0;
+}
+
+.navigation ul li {
+	border-bottom: 1px solid #333;
+	font-size: 1.8em;
+}
+
+.navigation ul li a {
+	display: block;
+	padding: 12px 8px 12px 15px;
+}
+
+.navigation ul li a:hover {
+	background-color: #BC1042;
+	color: #FFF;
+}
+
+/* ---------- Footer -----------*/
+
+#footer {
+	padding: 70px 15px 70px 15px;
+	background-color: #f0f0f0;
+	text-align: center;
+}
+
+#footer p{
+	color: #555;
+	font-size: 1.4em;
+}
+
+#footer p a {
+	display: inline-block;
+	border: 1px solid #f0f0f0;
+	padding: 4px 6px 3px 6px;
+}
+
+#footer p a:hover {
+	border-color: #d85669;
+}
+

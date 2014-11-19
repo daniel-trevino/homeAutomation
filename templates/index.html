@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> RPi Home Control System </title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial scale=1, width=device-width, minimum-scale=1, maximum-scale=1" /> <!-- Tell the browser it's gonna be responsive (and allow no zoom) --> 
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/mediaqueries.css') }}" />
+	<link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="{{ url_for ('static', filename = 'js/jquery-1.11.1.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for ('static', filename = 'js/frontend.js') }}"></script>
+</head>
+
+<body class="body">
+	
+	<div class="navigation">
+		<ul>
+			<li><a href="#about">Ajustes</a></li>
+		</ul>
+	</div>
+
+	<div id="wrapper">
+		
+		<div class="topright-elements cf"><div class="nav-trigger"></div></div>
+		
+		<header id="header">
+			<div class="centered-wrapper cf">
+				<div class="portrait">
+					<img src="{{ url_for ('static', filename = 'img/rpi_logo.jpg' ) }} ">
+				</div>
+				<h1><span class="name"><br>Automatización de Casas</span><br></h1>
+			</div>
+		</header>
+		
+		<div class="content">
+
+			<div class="centered-wrapper cf">
+			
+				<ul class="devices cf">
+					{% if pins[22].state == true %}
+						<li class="cuarto1-on"><a href="/22/off"></a>{{ pins[22].name }} ON</li>
+					{% else %}
+						<li class="cuarto1-off"><a href="/22/on"></a>{{ pins[22].name }} OFF</li>
+					{% endif %}
+					{% if pins[24].state == true %}
+						<li class="cuarto2-on"><a href="/24/off"></a>{{ pins[24].name }} ON</li>
+					{% else %}
+						<li class="cuarto2-off"><a href="/24/on"></a>{{ pins[24].name }} OFF</li>
+					{% endif %}
+					{% if pins[26].state == true %}
+						<li class="jardin-on"><a href="/26/off"></a>{{ pins[26].name }} ON</li>
+					{% else %}
+						<li class="jardin-off"><a href="/26/on"></a>{{ pins[26].name }} OFF</li>
+					{% endif %}
+					{% if pins[7].state == true %}
+						<li class="panico-on"><a href="/7/off"></a>{{ pins[7].name }} ON</li>
+					{% else %}
+						<li class="panico-off"><a href="/7/on"></a>{{ pins[7].name }} OFF</li>
+					{% endif %}
+				
+				</ul>				
+		</div> <!-- END content wrapper -->	
+		
+		
+		<footer id="footer">
+		
+			<p>Daniel Rodolfo Treviño García </p><br>
+			<p>Proyecto de Tesis <a href="/" title="danieltrevino">Universidad de las Américas Puebla</a></p>
+		</footer>		
+	</div> <!-- END wrapper -->
+	
+
+</body>
+</html>
